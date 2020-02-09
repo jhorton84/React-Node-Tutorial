@@ -54,7 +54,7 @@ Node is a back-end service. Simply put if you are in your /server folder that's 
 ### How can I write HTML in JavaScript?
 If you're like me you probably want to know how some of this is working. Let's start by working our way backwards. 
 
-![create react app inspect](/src/images/inspect-app-child)
+![create react app inspect](/src/images/inspect-App-child.png)
 
 
 
