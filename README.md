@@ -4,13 +4,16 @@ This project is a tutorial application to help new developers at DevMountain lea
 <br/>
 I decided to make this as a way to help students learn the full stack by covering basic concepts that weren't easily obvious to me during my own time at DevMountain. 
 <br/>
-This application was created by first running 
-`npx create-react-app <application-name>`
+This application was created by first running
+<br/> 
+
+#### `npx create-react-app <application-name>`
+
 <br/>
 Running the above code in the terminal creates a "boiler plate" React application that allows you to immediately start coding in ReactJS. So let's get started!
 
 ### What I wish I knew on Day 1...
-Let's start by covering some basic concepts of what is going on in React. As a brand new developer learning JavaScript while also tackling React I often found myself confused on what was React, what was JavaScript, and what was Node. To put it simply, React is a Library that makes your life as a developer MUCH easier. It was created by our friends at Facebook and allows us to create applications faster and efficiently than having to do it all from scratch. Thank you React team!
+Let's start by covering some basic concepts of what is going on in React. As a brand new developer learning JavaScript while also tackling React I often found myself confused on what was React, what was JavaScript, and what was Node. To put it simply, React is a Library that makes your life as a developer MUCH easier. It was created by our friends at Facebook and allows us to create applications quicker and more efficiently than having to do it all from scratch. Thank you React team!
 <br/>
 This tutorial teaches React that is coded in the JavaScript language, so what is the difference between JavaScript and React? That would be like asking what is the difference between the English language (JavaScript) and the English Dictionary (React). Though this may not be the best example I hope it makes things more clear. Though React can be written in other languages, such as Ruby, in this case we are using JavaScript. Everything we do in React will be coded using the JavaScript language. The better you know JavaScript the easier React will be. You can read an English Dictionary with a strong understanding of the English language, however this doesn't necessarily work in the reverse. Often as a student I would be confused thinking that what I wasn't understanding was React. I was wrong. The more I learned and the better I understood JavaScript the easier and simpler React became.
 <br/>
