@@ -11,7 +11,7 @@ This application was created by first running
 
 <br/>
 
-Running the above code in the terminal creates a "boiler plate" React application that allows you to immediately start coding in ReactJS. This is also why it states at the very beginning "This project was bootstrapped with [create react app](https://github.com/facebook/create-react-app)." This is so simple but many students don't even fully understand what this means. So not to be confused with the Framework called "[Bootstrap](https://getbootstrap.com/)" that was developed by a team at Twitter, to "bootstrap" an application, which is what happens when we run the above command, simply means to run a process that automatically loads and executes commands.
+Running the above code in the terminal creates a "boiler plate" React application that allows you to immediately start coding in ReactJS. This is also why it states at the very beginning of this ReadME "This project was bootstrapped with [create react app](https://github.com/facebook/create-react-app)." This is so simple but many students don't even fully understand what this means. So not to be confused with the Framework called "[Bootstrap](https://getbootstrap.com/)", that was developed by a team at Twitter, to "bootstrapping" an application, which is what happens when we run the above command. To bootstrap simply means to run a process that automatically loads and executes commands. So if I were to create an application using the Bootstrap Framework, I might say that I "bootstrapped Bootsrap" vs what we are doing which is bootstrap React. Get it now?
 
 So let's get started!
 
@@ -25,8 +25,7 @@ So what is the difference between JavaScript and React? Class at DevMountain was
 
 <br/>
 
-This may not be the best example, but I hope it makes things more clear. Even though React can be written in other languages, such as Ruby, in this case we are using JavaScript. Everything we do in React will be coded using the JavaScript language. The better you know JavaScript the easier React will be. You can read an English dictionary with a strong understanding of the English language, however this doesn't necessarily work in the reverse. Often as a student I would be confused thinking that what I wasn't understanding was React. I was wrong. The more I learned and the better I understood JavaScript the easier and simpler React became. So in short, EVERYTHING we are doing in a .js file is JavaScript which means 90% of your code will be JavaScript. ALL of our React code, will be written in the JavaScript language which is why if you get better at JavaScript you will also get better at React.
-
+This may not be the best example, but I hope it makes things more clear. Even though React can be written in other languages, such as Ruby, in this case we are using JavaScript. Everything we do in React will be coded using the JavaScript language. The better you know JavaScript the easier React will be. You can read an English dictionary with a strong understanding of the English language, however this doesn't necessarily work in the reverse. Often as a student I would be confused thinking that what I wasn't understanding was React. I was wrong. The more I learned and the better I understood JavaScript the easier and simpler React became. So in short, EVERYTHING we are doing in a .js file is JavaScript (ignoring that React allows us to write our HTML in JavaScript) which means 90% of your code will be JavaScript. ALL of our React code, will be written in the JavaScript language which is why if you get better at JavaScript you will also get better at React.
 <br/>
 
 In short if you find yourself confused or struggling, more often than not the problem is that you might need to study JavaScript and React will make more sense.
@@ -51,10 +50,19 @@ Node is a back-end service. Simply put if you are in your /server folder that's 
 • massive()
 <br/>
 
-### How can I write HTML in JavaScript?
-If you're like me you probably want to know how some of this is working. Let's start by working our way backwards. 
+### Let's Start at the Beginning
+If you haven't forked and cloned this repo yet, go ahead and do so now. 
+<br/>
+Ok we are finally ready to start looking at some code. We have our foundational knowledge and we can start building on that. First, let's talk about how React works on a higher level. As you may know, HTML is what is displayed to the browser. In a traditional website you put your HTML in an .html file, javaScript in a .js file. However in React we write our html in our .js components. This can be mind-boggling for some, so lets remove at least some of the mystery. Below is a screenshot of what shows in the elements section after inspecting the page of a basic React app. In this image I haven't coded anything since the initial bootstrap command. 
 
 ![create react app inspect](/src/images/inspect-App-child.png)
+
+
+Study this image, then navigate in your application to the /public/index.html file. Look familiar? The main thing you should notice from this is that in the above image we have a div with the `class="App"` as a child of the div with an `id="root"`. This occurs because of your index.js file inside of the /src folder. Let's take a look in here next.
+
+This file has a line that looks like this:
+
+`ReactDOM.render(<App />, document.getElementById('root'));`
 
 
 
