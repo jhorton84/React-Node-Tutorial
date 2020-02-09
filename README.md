@@ -34,19 +34,12 @@ In short if you find yourself confused or struggling, more often than not the pr
 Ok so now that we have talked about what React is and what it isn't we can now start to discuss some of the React features. Using our JavaScript skills we will create certain features that React uses to make our lives as developers easier. Some of these features are:
 
 ### 
-
 <br/>
-
 • Components (Class/Functional)
-
 <br/>
-
 • Redux
-
 <br/>
-
 • Router (Browser-Router, Hash-Router)
-
 <br/>
 
 ### 
