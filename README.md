@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## ReactJS/NodeJS Tutorial
-This project is a tutorial application to help new developers at DevMountain learn the React/Node stack. Through this project concepts and tutorials will be given to help explain how to connect your front-end (React) to your back-end (Node). If you are a new developer at DevMountain I recommend not skipping any of this tutorial even if it covers concepts you already know as you may miss something you do not.
+This project is a tutorial application to help new developers at DevMountain learn the React/Node stack. Through this project, concepts and tutorials will be given to help explain how to connect your front-end (React) to your back-end (Node). If you are a new developer at DevMountain I recommend not skipping any of this tutorial even if it covers concepts you already know, as you may miss something you do not.
 <br/>
-I decided to make this as a way to help students learn the full stack by covering basic concepts that weren't easily obvious to me during my own time at DevMountain. 
+I decided to make this as a way to help students learn the full stack by covering basic concepts that weren't easily obvious to me during my own time at DevMountain. Hoping to make your time at DevMountain a little smoother so that you might avoid some of the struggles I went through.
 <br/>
 This application was created by first running
 <br/> 
@@ -10,14 +10,49 @@ This application was created by first running
 #### `npx create-react-app <application-name>`
 
 <br/>
-Running the above code in the terminal creates a "boiler plate" React application that allows you to immediately start coding in ReactJS. So let's get started!
+
+Running the above code in the terminal creates a "boiler plate" React application that allows you to immediately start coding in ReactJS. This is also why it states at the very beginning "This project was bootstrapped with [create react app](https://github.com/facebook/create-react-app)." So let's get started!
 
 ### What I wish I knew on Day 1...
-Let's start by covering some basic concepts of what is going on in React. As a brand new developer learning JavaScript while also tackling React I often found myself confused on what was React, what was JavaScript, and what was Node. To put it simply, React is a Library that makes your life as a developer MUCH easier. It was created by our friends at Facebook and allows us to create applications quicker and more efficiently than having to do it all from scratch. Thank you React team!
+Let's start by covering some basic concepts of what is going on in React. As a brand new developer learning JavaScript while also tackling React I often found myself confused on what was React, what was JavaScript, and what was Node. To put it simply, React is a Library that makes your life as a developer MUCH easier. It was created by our friends at Facebook and allows us to create applications quicker and more efficiently than having to do it all from scratch in just plain pure JavaScript. Thank you React team!
+
 <br/>
-This tutorial teaches React that is coded in the JavaScript language, so what is the difference between JavaScript and React? That would be like asking what is the difference between the English language (JavaScript) and the English Dictionary (React). Though this may not be the best example I hope it makes things more clear. Though React can be written in other languages, such as Ruby, in this case we are using JavaScript. Everything we do in React will be coded using the JavaScript language. The better you know JavaScript the easier React will be. You can read an English Dictionary with a strong understanding of the English language, however this doesn't necessarily work in the reverse. Often as a student I would be confused thinking that what I wasn't understanding was React. I was wrong. The more I learned and the better I understood JavaScript the easier and simpler React became.
+
+### React vs JavaScript - What's the Difference?
+
+So what is the difference between JavaScript and React? Class at DevMountain was full of my instructor coding away and me trying to follow along, keep up, and not make mistakes that slowed down the learning process. However, this meant that in my rush to copy what the instructor was doing I wasn't always absorbing the "what" or the "why" of what we were doing. This led to a disconnect between when I was writing JavaScript and when I was writing React. I'm cringing even as I write this because asking what is the difference between JavaScript and React would be like asking what is the difference between the English language (JavaScript) and the English Dictionary (React). 
+
 <br/>
-In short if you find yourself confused or struggling, more often than not the problem is that you might need to study JavaScript and React will make more sense. 
+
+Though this may not be the best example I hope it makes things more clear. Though React can be written in other languages, such as Ruby, in this case we are using JavaScript. Everything we do in React will be coded using the JavaScript language. The better you know JavaScript the easier React will be. You can read an English Dictionary with a strong understanding of the English language, however this doesn't necessarily work in the reverse. Often as a student I would be confused thinking that what I wasn't understanding was React. I was wrong. The more I learned and the better I understood JavaScript the easier and simpler React became. So in short, EVERYTHING we are doing in a .js file is JavaScript which means 90% of your code will be JavaScript. ALL of our React code, will be written in the JavaScript language which is why if you get better at JavaScript you will also get better at React.
+
+<br/>
+
+In short if you find yourself confused or struggling, more often than not the problem is that you might need to study JavaScript and React will make more sense.
+
+### React De-mystified - It's not Magic... 
+Ok so now that we have talked about what React is and what it isn't we can now start to discuss some of the React features. Using our JavaScript skills we will create certain features that React uses to make our lives as developers easier. Some of these features are:
+
+### 
+
+<br/>
+
+• Components (Class/Functional)
+
+<br/>
+
+• Redux
+
+<br/>
+
+• Router (Browser-Router, Hash-Router)
+
+<br/>
+
+### 
+
+
+
 
 
 ## Available Scripts
