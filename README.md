@@ -41,13 +41,20 @@ Ok so now that we have talked about what React is and what it isn't we can now s
 • Router (Browser-Router, Hash-Router)
 <br/>
 
-#### Where React Code is written?
+#### Where is React Code written?
 React is front-end, therefore all of our React code and features will be placed inside of the /src folder. Your components, Redux, and Routes will all be within this folder. 
 #### Where is Node Code written?
-Node is a back-end service. Simply put if you are in your /server folder thats Node.js. Since we use JavaScript for both our front-end and our back-end it can be confusing for some to differentiate when we are writing Node.Js and when we are doing ReactJs. Understanding these differences will help you when discussing your skills with hiring managers!
+Node is a back-end service. Simply put if you are in your /server folder that's Node.js. Since we use JavaScript for both our front-end and our back-end it can be confusing for some to differentiate when we are writing Node.Js and when we are doing ReactJs. Understanding these differences will help you when discussing your skills with hiring managers! Things we use in Node are:
+<br/>
+• express()
+<br/>
+• massive()
+<br/>
 
+### How can I write HTML in JavaScript?
+If you're like me you probably want to know how some of this is working. Let's start by working our way backwards. 
 
-
+<img src=(/src/images/inspect-app-child) />
 
 
 
