@@ -112,7 +112,7 @@ class Hero {
 
 In the above example we can now access two methods, greet, and powerUp within the constructor function... hopefully by now this is starting to look familiar. It's just JavaScript! <br/>
 
-Last lets look at what it means to extend a class. "An advantageous feature of constructor functions and classes is that they can be extended into new object blueprints based off of the parent. This prevents repetition of code for objects that are similar but need some additional or more specific features." 
+Last lets look at what it means to extend a class. *"An advantageous feature of constructor functions and classes is that they can be extended into new object blueprints based off of the parent. This prevents repetition of code for objects that are similar but need some additional or more specific features."* 
 
 ```
 // Creating a new class from the parent
@@ -136,7 +136,30 @@ Notice how we used the method super() and passed in the variables we need for th
 
 Now that we better understand javaScript classes lets take a look at our class Components.
 
+```
+import React, {Component} from 'react';
 
+class App extends Component {
+	constructor() {
+		super();
+		this.state = {
+
+		}
+	}
+	//methods will go here. 
+
+	render() {
+		return (
+			<div className='App' >
+				HTML or JSX here!
+			</div>
+		)
+	}
+}
+export default App;
+```
+Holy Guacamole J.T.! The class Component is just a class!... go figure. <br/>
+A class Component that React has  The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the dom.
 
 
 ## Available Scripts
