@@ -159,7 +159,8 @@ class App extends Component {
 export default App;
 ```
 Holy Guacamole J.T.! The class Component is just a class!... go figure. <br/>
-A class Component that React has  The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the dom.
+
+A class Component is a class that React has built into it. The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the dom. And we have made App a class that is a child of the Component Class in React. 
 
 
 ## Available Scripts
