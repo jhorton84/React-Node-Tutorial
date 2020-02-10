@@ -5,7 +5,7 @@ This project is a tutorial application to help new developers at DevMountain lea
 I decided to make this as a way to help students learn the full stack by covering basic concepts that weren't easily obvious to me during my own time at DevMountain. Hoping to make your time at DevMountain a little smoother so that you might avoid some of the struggles I went through.
 <br/>
 
-### First Things First
+### Part 1: First Things First
 This application was created by first running
 <br/> 
 
@@ -57,10 +57,16 @@ In your /server folder you have probably created these files:<br/>
 `index.js` & `controller.js`<br/>
 These are also part of Node.Js
 
-## Let's Start at the Beginning
+## Part 2: Let's Start at the Beginning
+This section covers a higher level of understanding of the "HOW". In this section we will be discussing:<br/>
+• How App.Js is injected into our html file<br/>
+• What are components and how should they be used?<br/>
+
+#### The relationship between App.js, index.html, & /src/index.js
 If you haven't forked and cloned this repo yet, go ahead and do so now. 
 <br/>
-Ok we are finally ready to start looking at some code. We have our foundational knowledge and we can start building on that. First, let's talk about how React works on a higher level. As you may know, HTML is what is displayed to the browser. In a traditional website you put your HTML in an .html file and javaScript in a .js file. However in React we write our html in our .js components. This can be mind-boggling for some, so lets remove at least some of the mystery. Below is a screenshot of what shows in the elements section after inspecting the page of a basic React app. In this image I haven't coded anything since the initial bootstrap command. 
+
+Ok we are finally ready to start looking at some code. We have some foundational knowledge and we can start building on that. First, let's talk about how React works on a higher level. As you may know, HTML is what is displayed to the browser. In a traditional website you put your HTML in a `<fileName>.html` and javaScript in a `<fileName>.js`. However in React we write our html in our .js components. Whaaaaat?!?! This can be mind-boggling for some, so lets remove at least some of the mystery. Below is a screenshot of what shows in the elements section after inspecting the page of a basic React app. In this image I haven't coded anything since the initial bootstrap command. 
 
 ![create react app inspect](/src/images/inspect-App-child.png)
 
@@ -73,6 +79,55 @@ Study this image, then navigate in your application to the /public/index.html fi
 
 Can you tell what is going on here? I hope so, but if not that's ok! This line basically states that React is going to render the App component (imported at the top of the file) `import App from './App';` by placing it inside of the element with an id of 'root'. The  `document.getElementById()` is a vanilla JavaScript method that will look for a div with the id attribute with the name passed in as the argument. In our case the name passed in is 'root' which we already found in the `index.html` file in our "public" folder. Because of this code we can now make the App component which is a child of the div with an id of root in our index.html file the parent component of the rest of our app. This way all of our components we create if children and grandchildren of App will also be a part of the application through this root div. 
 If you have any further questions regarding this I recommend studying the `document.getElementById()` method.
+
+#### Components
+ As we already discussed App.js is a component that in our case we will use to be the outer most parent. All other components we create will be children/grandchildren of App.js. 
+
+##### Class Components
+Remember how we said in the beginning that React was just JavaScript and the better you understand JavaScript the easier React will be? Components are a perfect example of this. Starting with class components, do you remember creating classes? 
+```
+class Hero {
+  constructor(name, level) {
+    this.name = name;
+    this.level = level;
+  }
+}
+```
+This is a class. The name of this class is "Hero" and has a constructor function inside that contains two variables, name and level. The "this" keyword is used so that when we call it later, it knows we are referring to the name and level of the particular hero we are talking about. Inside of a constructor function we can also have methods we create, which are functions defined within the constructor.
+```
+class Hero {
+	constructor(name, level) {
+		this.name = name;
+		this.level = level;
+	}
+	greet() {
+		return `${this.name} says hello.`;
+	}
+	powerUP() {
+      return this.level+1;
+    }
+}
+```
+In the above example we can now access two methods, greet, and powerUp within the constructor function... hopefully by now this is starting to look familiar. It's just JavaScript! <br/>
+
+Last lets look at what it means to extend a class. "An advantageous feature of constructor functions and classes is that they can be extended into new object blueprints based off of the parent. This prevents repetition of code for objects that are similar but need some additional or more specific features." 
+
+```
+// Creating a new class from the parent
+class Mage extends Hero {
+    constructor(name, level, spell) {
+        // Chain constructor with super
+        super(name, level);
+
+        // Add a new property
+        this.spell = spell;
+    }
+}
+```
+This is an ES6 feature that we can use to create a new instance of Hero that is also a mage. Mage will be a child of Hero in this case and have access to the same methods and variables that we pass into super().<br/>
+
+
+
 
 
 ## Available Scripts
