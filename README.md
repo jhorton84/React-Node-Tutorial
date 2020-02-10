@@ -84,7 +84,7 @@ If you have any further questions regarding this I recommend studying the `docum
  As we already discussed App.js is a component that in our case we will use to be the outer most parent. All other components we create will be children/grandchildren of App.js. 
 
 ##### Class Components
-Remember how we said in the beginning that React was just JavaScript and the better you understand JavaScript the easier React will be? Components are a perfect example of this. Starting with class components, do you remember creating classes? 
+Remember how we said in the beginning that React was just JavaScript and the better you understand JavaScript the easier React will be? Components are a perfect example of this. Starting with class components, do you remember creating classes during javaScript week?
 ```
 class Hero {
   constructor(name, level) {
@@ -93,7 +93,8 @@ class Hero {
   }
 }
 ```
-This is a class. The name of this class is "Hero" and has a constructor function inside that contains two variables, name and level. The "this" keyword is used so that when we call it later, it knows we are referring to the name and level of the particular hero we are talking about. Inside of a constructor function we can also have methods we create, which are functions defined within the constructor.
+This is a class. The name of this class is "Hero" and has a constructor function inside that contains two variables, `name` and `level`. The "this" keyword is used so that when we call it later, it knows we are referring to the `name` and `level` of the particular `hero` we are talking about. Inside of a constructor function we can also have methods we create, which are functions defined within the constructor.
+
 ```
 class Hero {
 	constructor(name, level) {
@@ -104,10 +105,11 @@ class Hero {
 		return `${this.name} says hello.`;
 	}
 	powerUP() {
-      return this.level+1;
+		this.level = this.level++;
     }
 }
 ```
+
 In the above example we can now access two methods, greet, and powerUp within the constructor function... hopefully by now this is starting to look familiar. It's just JavaScript! <br/>
 
 Last lets look at what it means to extend a class. "An advantageous feature of constructor functions and classes is that they can be extended into new object blueprints based off of the parent. This prevents repetition of code for objects that are similar but need some additional or more specific features." 
@@ -126,6 +128,13 @@ class Mage extends Hero {
 ```
 This is an ES6 feature that we can use to create a new instance of Hero that is also a mage. Mage will be a child of Hero in this case and have access to the same methods and variables that we pass into super().<br/>
 
+Now we can create a hero and a mage at the same time.<br/>
+```
+const hero2 = new Mage('Lejon', 2, 'Magic Missile');
+```
+Notice how we used the method super() and passed in the variables we need for the Hero class? You can read more about these examples [here](https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript).
+
+Now that we better understand javaScript classes lets take a look at our class Components.
 
 
 
