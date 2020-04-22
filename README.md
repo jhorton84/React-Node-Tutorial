@@ -1,17 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+JavaScript
+
 # ReactJS/NodeJS Tutorial
 This project is a tutorial application to help new developers at DevMountain learn the React/Node stack. Through this project, concepts and tutorials will be given to help explain how to connect your front-end (React) to your back-end (Node). If you are a new developer at DevMountain I recommend not skipping any of this tutorial even if it covers concepts you already know, as you may miss something you do not.
-<br/>
+
 I decided to make this as a way to help students learn the full stack by covering basic concepts that weren't easily obvious to me during my own time at DevMountain. Hoping to make your time at DevMountain a little smoother so that you might avoid some of the struggles I went through.
-<br/>
+
 
 ### Part 1: First Things First
 This application was created by first running
-<br/> 
 
 #### `npx create-react-app <application-name>`
-
-<br/>
 
 Running the above code in the terminal creates a "boiler plate" React application that allows you to immediately start coding in ReactJS. This is also why it states at the very beginning of this ReadME "This project was bootstrapped with [create react app](https://github.com/facebook/create-react-app)." This is so simple but many students don't even fully understand what this means. So not to be confused with the Framework called "[Bootstrap](https://getbootstrap.com/)", that was developed by a team at Twitter, to "bootstrapping" an application, which is what happens when we run the above command. To bootstrap simply means to run a process that automatically loads and executes commands. So if I were to create an application using the Bootstrap Framework, I might say that I "bootstrapped Bootsrap" vs what we are doing which is bootstrap React. Get it now?
 
@@ -19,41 +19,34 @@ So let's get started!
 
 ### What I wish I knew on Day 1...
 Let's start by covering some basic concepts of what is going on in React. As a brand-new developer learning JavaScript while also tackling React I often found myself confused on what was React, what was JavaScript, and what was Node. To put it simply, React is a Library that makes your life as a developer MUCH easier. It was created by our friends at Facebook and allows us to create applications quicker and more efficiently than having to do it all from scratch in just plain pure JavaScript. Thank you React team!
-<br/>
 
 #### React vs JavaScript - What's the Difference?
 
 So what is the difference between JavaScript and React? My time at DevMountain was full of my instructor coding away and me trying to follow along, keep up, and not make mistakes that slowed down the learning process. However, this meant that in my rush to copy what the instructor was doing I wasn't always absorbing the "what" or the "why" of what we were doing. This led to a disconnect between when I was writing JavaScript and when I was writing React. I'm cringing even as I write this because asking what is the difference between JavaScript and React would be like asking what is the difference between the English language (JavaScript) and the English Dictionary (React). 
 
-<br/>
-
 This may not be the best example, but I hope it makes things more clear. Even though React can be written in other languages, such as Ruby, in this case we are using JavaScript. Everything we do in React will be coded using the JavaScript language. The better you know JavaScript the easier React will be. You can read an English dictionary with an understanding of the English language, however this doesn't necessarily work in the reverse. Often as a student I would be confused thinking that what I wasn't understanding was React. I was wrong. The more I learned and the better I understood JavaScript the easier and simpler React became. ALL of our React code, will be written in the JavaScript language which is why if you get better at JavaScript you will also get better at React.
-<br/>
 
 In short if you find yourself confused or struggling, more often than not the problem is that you might need to study JavaScript and React will make more sense. It is unlikely that the reverse logic will work. So to sum up... JavaScript! JavaScript! JavaScript! Focus on these skills and the React will start to take care of itself!
 
 #### React De-mystified - It's not Magic... 
-Here are some examples to illustrate what we have discussed so far. Using our JavaScript skills we will create certain features that React uses to make our lives as developers easier. Some of these features are:
-<br/>
-• Components (Class/Functional)
-<br/>
-• Redux
-<br/>
-• Router (Browser-Router, Hash-Router)
-<br/>
+Here are some examples to illustrate what we have discussed so far. Using our JavaScript skills we will create certain features that React uses to make our lives as developers easier. Some of these features are:<br/>
+• Components (Class/Functional)<br/>
+• Redux <br/>
+• Router (Browser-Router, Hash-Router)<br/>
+
 All of these things that we build USING JavaScript work and function because of React and are a part of the way React is made to be used.
 
 #### Where is React Code written?
-React is front-end, therefore all of our React code and features will be placed inside of the /src folder. Your components, Redux, and Routes will all be within this folder. Take some time to look at your /src folder and what it contains.
+React is front-end, therefore all of our React code and features will be placed inside of the src/ folder. Your components, Redux, and Routes will all be within this folder. Take some time to look at your src/ folder and what it contains.
 #### Where is Node Code written?
-Node is a back-end service. Simply put if you are in your /server folder that's Node.js. Since we use JavaScript for both our front-end and our back-end it can be confusing for some to differentiate when we are writing Node.Js and when we are doing ReactJs. Understanding these differences will help you when discussing your skills with hiring managers! Things we use in Node are:
+Node is a back-end service. Simply put if you are in your server/ folder that's Node.js. Since we use JavaScript for both our front-end and our back-end it can be confusing for some to differentiate when we are writing Node.Js and when we are doing ReactJs. Understanding these differences will help you when discussing your skills with hiring managers! Things we use in Node are:
 <br/>
 • express()
 <br/>
 • massive()
 <br/>
 
-In your /server folder you have probably created these files:<br/>
+In your server/ folder you have probably created these files:<br/>
 `index.js` & `controller.js`<br/>
 These are also part of Node.Js
 
@@ -73,7 +66,7 @@ Ok we are finally ready to start looking at some code. We have some foundational
 
 Study this image, then navigate in your application to the /public/index.html file. Look familiar? The main thing you should notice from this is that in the above image we have a div with the `class="App"` as a child of the div with an `id="root"`. This occurs because of your index.js file inside of the /src folder. Let's take a look in here next.
 
-`/src/index.js` has a line that looks like this:
+`src/index.js` has a line that looks like this:
 
 `ReactDOM.render(<App />, document.getElementById('root'));`
 
@@ -84,7 +77,7 @@ If you have any further questions regarding this I recommend studying the `docum
  As we already discussed App.js is a component that in our case we will use to be the outer most parent. All other components we create will be children/grandchildren of App.js. 
 
 ##### Class Components
-Remember how we said in the beginning that React was just JavaScript and the better you understand JavaScript the easier React will be? Components are a perfect example of this. Starting with class components, do you remember creating classes during javaScript week?
+Remember how we said in the beginning that React was just JavaScript and the better you understand JavaScript the easier React will be? Components are a perfect example of this. Starting with class components, do you remember creating classes during JavaScript week?
 ```
 class Hero {
   constructor(name, level) {
@@ -110,9 +103,9 @@ class Hero {
 }
 ```
 
-In the above example we can now access two methods, greet, and powerUp within the constructor function... hopefully by now this is starting to look familiar. It's just JavaScript! <br/>
+In the above example we can now access two methods, greet, and powerUp within the constructor function... hopefully by now this is starting to look familiar. It's just JavaScript!
 
-Last lets look at what it means to extend a class. *"An advantageous feature of constructor functions and classes is that they can be extended into new object blueprints based off of the parent. This prevents repetition of code for objects that are similar but need some additional or more specific features."* 
+Last lets look at what it means to extend a class. [*"An advantageous feature of constructor functions and classes is that they can be extended into new object blueprints based off of the parent. This prevents repetition of code for objects that are similar but need some additional or more specific features."*](https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript) 
 
 ```
 // Creating a new class from the parent
@@ -160,7 +153,7 @@ export default App;
 ```
 Holy Guacamole J.T.! The class Component is just a class!... go figure. <br/>
 
-A class Component is a class that React has built into it. The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the dom. And we have made App a class that is a child of the Component Class in React. 
+A class Component is a class that React has built into it. The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the DOM. And we have made `App` a class that is a child of the Component Class in React. 
 
 
 ## Available Scripts
