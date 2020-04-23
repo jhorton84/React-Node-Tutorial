@@ -71,7 +71,8 @@ Study this image, then navigate in your application to the /public/index.html fi
 
 `ReactDOM.render(<App />, document.getElementById('root'));`
 
-Take a minute to read the above code and see if you can understand what is going on before continuing.<br/> 
+Take a minute to read the above code and see if you can understand what is going on before continuing.<br/>
+ 
 This line basically states that React is going to render the App component (imported at the top of the file) `import App from './App';` by placing it inside of the element with an id of 'root'. The  `document.getElementById()` is a vanilla JavaScript method that will look for a div with the id attribute with the name passed in as the argument. In our case the name passed in is 'root' which we already found in the `index.html` file in our "public" folder. Because of this code we can now make the App component which is a child of the div with an id of root in our index.html file the parent component of the rest of our app. This way all of our components we create if children and grandchildren of App will also be a part of the application through this root div. 
 If you have any further questions regarding this I recommend studying the `document.getElementById()` method.
 
