@@ -7,6 +7,34 @@ This project is a tutorial application to help new developers at DevMountain lea
 
 I decided to make this as a way to help students learn the full stack by covering basic concepts that weren't easily obvious to me during my own time at DevMountain. Hoping to make your time at DevMountain a little smoother so that you might avoid some of the struggles I went through.
 
+## Overview
+Part 1: First Things First
+	• What I Wish I Knew on Day 1
+		• React vs JavaScript - What's the Difference?
+		• The Stack
+		• Where is React Code Written?
+		• Where is Node Code Written?
+Part 2: Let's Start at the Beginning
+	• The Relationship Between App.js, index.html, & /src/index.js
+	• Intro to React Components
+		• Class Components
+		• Functional Components
+Part 3: Managing State
+	• The Basics
+		• Constructor Functions
+		• onClick and onChange Events
+		• Props
+	• Redux
+		• Creating a Store
+		• Reducer
+			• Switch Statements
+		• React Redux - Provider
+		• Connect
+		• mapStateToProps & mapDispatchToProps
+	• Hooks
+		• useState Hook
+Part 4: Node
+
 
 ### Part 1: First Things First
 This application was created by first running
@@ -76,7 +104,7 @@ Take a minute to read the above code and see if you can understand what is going
 This line basically states that React is going to render the App component (imported at the top of the file) `import App from './App';` by placing it inside of the element with an id of 'root'. The  `document.getElementById()` is a vanilla JavaScript method that will look for a div with the id attribute with the name passed in as the argument. In our case the name passed in is 'root' which we already found in the `index.html` file in our "public" folder. Because of this code we can now make the App component which is a child of the div with an id of root in our index.html file the parent component of the rest of our app. This way all of our components we create if children and grandchildren of App will also be a part of the application through this root div. 
 If you have any further questions regarding this I recommend studying the `document.getElementById()` method.
 
-#### Components
+#### Intro to React Components
  As we already discussed, App.js is a component that in our case we will use to be the outer most parent. All other components we create will be children/grandchildren of App.js. 
 
 ##### Class Components
@@ -160,7 +188,7 @@ A class Component is a class that React has built into it. The render function i
 
 
 ##### Functional Components
-A functional component is simply creating a component as a function instead of a class. Prior to the development and introduction to a tool called React Hooks, a functional component couldn't manage state. We will talk about Hooks later and just focus on the structural differences in setting up a basic functional component and how it differs from a Class component. 
+A functional component is simply creating a component as a basic function instead of a class. Prior to the development and introduction to a tool called React Hooks, a functional Component couldn't manage state. We will talk about Hooks later and just focus on the structural differences in setting up a basic functional component and how it differs from a Class component. 
 
 We will start by importing React into the file so that we have access to the React library. Following that we will create a function and name it whatever we are going to call this component. In this tutorial we will call the component functionalComponent. Finally we will then export our function.
 
@@ -177,4 +205,7 @@ export default functionalComponent;
 ```
 The first difference to pay attention to is that this is just a function that returns a div. The second thing to notice is that functional components don't use the render method. Functional components are much simpler to write and prior to Hooks were generally used whenever you didn't need to manage state using a constructor function because of their simpler set up.
 
+ 
+ 
+ 
  *Still in Progress* 
