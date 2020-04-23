@@ -22,24 +22,25 @@ Let's start by covering some basic concepts of what is going on in React. As a b
 
 #### React vs JavaScript - What's the Difference?
 
-So what is the difference between JavaScript and React? My time at DevMountain was full of my instructor coding away and me trying to follow along, keep up, and not make mistakes that slowed down the learning process. However, this meant that in my rush to copy what the instructor was doing I wasn't always absorbing the "what" or the "why" of what we were doing. This led to a disconnect between when I was writing JavaScript and when I was writing React. I'm cringing even as I write this because asking what is the difference between JavaScript and React would be like asking what is the difference between the English language (JavaScript) and the English Dictionary (React). 
+So what is the difference between JavaScript and React? My time at DevMountain was full of my instructor coding away and me trying to follow along, keep up, and not make mistakes that slowed down the learning process. However, this meant that in my rush to copy what the instructor was doing I wasn't always absorbing the "what" or the "why" of what we were doing. This led to a disconnect between when I was writing JavaScript and when I was writing React. To put it simply, during this tutorial and most likely your time at DevMountain you will ALWAYS be writing in JavaScript, and at certain times you will be using JavaScript to write code using the React library. As we go this will hopefully become more clear.
 
-This may not be the best example, but I hope it makes things more clear. Even though React can be written in other languages, such as Ruby, in this case we are using JavaScript. Everything we do in React will be coded using the JavaScript language. The better you know JavaScript the easier React will be. You can read an English dictionary with an understanding of the English language, however this doesn't necessarily work in the reverse. Often as a student I would be confused thinking that what I wasn't understanding was React. I was wrong. The more I learned and the better I understood JavaScript the easier and simpler React became. ALL of our React code, will be written in the JavaScript language which is why if you get better at JavaScript you will also get better at React.
+Everything we do in React will be coded using the JavaScript language. The better you know JavaScript the easier React will be. Often as a student I would be confused thinking that what I wasn't understanding was React. I was wrong. The more I learned and the better I understood JavaScript the easier and simpler React became. ALL of our React code, will be written in the JavaScript language which is why if you get better at JavaScript you will also get better at React.
 
 In short if you find yourself confused or struggling, more often than not the problem is that you might need to study JavaScript and React will make more sense. It is unlikely that the reverse logic will work. So to sum up... JavaScript! JavaScript! JavaScript! Focus on these skills and the React will start to take care of itself!
 
-#### React De-mystified - It's not Magic... 
-Here are some examples to illustrate what we have discussed so far. Using our JavaScript skills we will create certain features that React uses to make our lives as developers easier. Some of these features are:<br/>
-• Components (Class/Functional)<br/>
-• Redux <br/>
+#### The Stack 
+Here are some examples to illustrate what we have discussed so far. Using our JavaScript skills we will create certain features to make our lives as developers easier. Some of these features are:<br/>
+• React Components (Class/Functional)<br/>
+• Redux (state management tool)<br/>
 • Router (Browser-Router, Hash-Router)<br/>
+• Node.Js (Back End Service)<br/>
 
-All of these things that we build USING JavaScript work and function because of React and are a part of the way React is made to be used.
+All of these things that we build are written in JavaScript. When someone asks you "What is your stack?" They are asking about these technologies. What languages are you using for your front-end and back-end development? What technologies/libraries/frameworks are you using within those languages? Telling someone you are a "Full stack developer" means that you are writing the code for both the front and back ends of an application. Of the list above, React components, Redux, and Router are all part of the front-end stack, while Node is the back end.
 
 #### Where is React Code written?
 React is front-end, therefore all of our React code and features will be placed inside of the src/ folder. Your components, Redux, and Routes will all be within this folder. Take some time to look at your src/ folder and what it contains.
 #### Where is Node Code written?
-Node is a back-end service. Simply put if you are in your server/ folder that's Node.js. Since we use JavaScript for both our front-end and our back-end it can be confusing for some to differentiate when we are writing Node.Js and when we are doing ReactJs. Understanding these differences will help you when discussing your skills with hiring managers! Things we use in Node are:
+Node is a back-end service. Simply put if you are in your server/ folder that's Node.js. Since we use JavaScript for both our front-end and our back-end it can be confusing for some to differentiate when we are writing Node.Js and when we are doing ReactJs. Understanding these differences will help you when discussing your skills with hiring managers! Examples of things we use in Node are:
 <br/>
 • express()
 <br/>
@@ -59,7 +60,7 @@ This section covers a higher level of understanding of the "HOW". In this sectio
 If you haven't forked and cloned this repo yet, go ahead and do so now. 
 <br/>
 
-Ok we are finally ready to start looking at some code. We have some foundational knowledge and we can start building on that. First, let's talk about how React works on a higher level. As you may know, HTML is what is displayed to the browser. In a traditional website you put your HTML in a `<fileName>.html` and javaScript in a `<fileName>.js`. However in React we write our html in our .js components. Whaaaaat?!?! This can be mind-boggling for some, so lets remove at least some of the mystery. Below is a screenshot of what shows in the elements section after inspecting the page of a basic React app. In this image I haven't coded anything since the initial bootstrap command. 
+Ok we are finally ready to start looking at some code. We have some foundational knowledge and we can start building on that. First, let's talk about how React works on a higher level. As you may know, HTML is what is displayed to the browser. In a traditional website you put your HTML in a `<fileName>.html` and javaScript in a `<fileName>.js`. However in React we write our html in our .js components. When we do this it is called JSX, not HTML, however it behaves in the same way. To explain this further, Googling JSX provides this definition: "JSX in an XML/HTML-like syntax used by React that extends ECMAScript so that XML/HTML-like text can co-exist with JavaScript/React code. ...Instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript." Below is a screenshot of what shows in the elements section after inspecting the page of a basic React app. In this image I haven't coded anything since the initial bootstrap command. 
 
 ![create react app inspect](/src/images/inspect-App-child.png)
 
@@ -70,7 +71,8 @@ Study this image, then navigate in your application to the /public/index.html fi
 
 `ReactDOM.render(<App />, document.getElementById('root'));`
 
-Can you tell what is going on here? I hope so, but if not that's ok! This line basically states that React is going to render the App component (imported at the top of the file) `import App from './App';` by placing it inside of the element with an id of 'root'. The  `document.getElementById()` is a vanilla JavaScript method that will look for a div with the id attribute with the name passed in as the argument. In our case the name passed in is 'root' which we already found in the `index.html` file in our "public" folder. Because of this code we can now make the App component which is a child of the div with an id of root in our index.html file the parent component of the rest of our app. This way all of our components we create if children and grandchildren of App will also be a part of the application through this root div. 
+Take a minute to read the above code and see if you can understand what is going on before continuing.<br/> 
+This line basically states that React is going to render the App component (imported at the top of the file) `import App from './App';` by placing it inside of the element with an id of 'root'. The  `document.getElementById()` is a vanilla JavaScript method that will look for a div with the id attribute with the name passed in as the argument. In our case the name passed in is 'root' which we already found in the `index.html` file in our "public" folder. Because of this code we can now make the App component which is a child of the div with an id of root in our index.html file the parent component of the rest of our app. This way all of our components we create if children and grandchildren of App will also be a part of the application through this root div. 
 If you have any further questions regarding this I recommend studying the `document.getElementById()` method.
 
 #### Components
@@ -151,7 +153,7 @@ class App extends Component {
 }
 export default App;
 ```
-Holy Guacamole J.T.! The class Component is just a class!... go figure. <br/>
+The class Component is simply that, a class! Hopefully you are starting to see that everything React does is simply JavaScript code written to make your life as a developer easier.  <br/>
 
 A class Component is a class that React has built into it. The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the DOM. And we have made `App` a class that is a child of the Component Class in React. 
 
