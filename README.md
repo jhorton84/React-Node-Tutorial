@@ -72,12 +72,12 @@ Study this image, then navigate in your application to the /public/index.html fi
 `ReactDOM.render(<App />, document.getElementById('root'));`
 
 Take a minute to read the above code and see if you can understand what is going on before continuing.<br/>
- 
+
 This line basically states that React is going to render the App component (imported at the top of the file) `import App from './App';` by placing it inside of the element with an id of 'root'. The  `document.getElementById()` is a vanilla JavaScript method that will look for a div with the id attribute with the name passed in as the argument. In our case the name passed in is 'root' which we already found in the `index.html` file in our "public" folder. Because of this code we can now make the App component which is a child of the div with an id of root in our index.html file the parent component of the rest of our app. This way all of our components we create if children and grandchildren of App will also be a part of the application through this root div. 
 If you have any further questions regarding this I recommend studying the `document.getElementById()` method.
 
 #### Components
- As we already discussed App.js is a component that in our case we will use to be the outer most parent. All other components we create will be children/grandchildren of App.js. 
+ As we already discussed, App.js is a component that in our case we will use to be the outer most parent. All other components we create will be children/grandchildren of App.js. 
 
 ##### Class Components
 Remember how we said in the beginning that React was just JavaScript and the better you understand JavaScript the easier React will be? Components are a perfect example of this. Starting with class components, do you remember creating classes during JavaScript week?
@@ -156,72 +156,25 @@ export default App;
 ```
 The class Component is simply that, a class! Hopefully you are starting to see that everything React does is simply JavaScript code written to make your life as a developer easier.  <br/>
 
-A class Component is a class that React has built into it. The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the DOM. And we have made `App` a class that is a child of the Component Class in React. 
+A class Component is a class that React has built into it. The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the DOM. And we have made `App` a class that is a child of the Component Class in React. Again, I recommend taking a few moments to study the above code and make sure you fully understand this before moving on.
 
 
-## Available Scripts
+##### Functional Components
+A functional component is simply creating a component as a function instead of a class. Prior to the development and introduction to a tool called React Hooks, a functional component couldn't manage state. We will talk about Hooks later and just focus on the structural differences in setting up a basic functional component and how it differs from a Class component. 
 
-In the project directory, you can run:
+We will start by importing React into the file so that we have access to the React library. Following that we will create a function and name it whatever we are going to call this component. In this tutorial we will call the component functionalComponent. Finally we will then export our function.
 
-### `npm start`
+```
+import React from 'react';
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+function functionalComponent(){
+	return (
+		<div>Hello World</div>
+	)
+}
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+export default functionalComponent;
+```
+The first difference to pay attention to is that this is just a function that returns a div. The second thing to notice is that functional components don't use the render method. Functional components are much simpler to write and prior to Hooks were generally used whenever you didn't need to manage state using a constructor function because of their simpler set up.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Still in Progress * 
