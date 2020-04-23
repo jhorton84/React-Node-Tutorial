@@ -135,28 +135,28 @@ Now that we better understand javaScript classes lets take a look at our class C
 ```
 import React, {Component} from 'react';
 
-class App extends Component {
+class Hero extends Component {
 	constructor() {
 		super();
 		this.state = {
-
+			
 		}
 	}
-	//methods will go here. 
 
-	render() {
-		return (
-			<div className='App' >
-				HTML or JSX here!
+	render(){
+		return(
+			<div className='Hero'>
+				
 			</div>
 		)
 	}
 }
-export default App;
+
+export default Hero;
 ```
 The class Component is simply that, a class! Hopefully you are starting to see that everything React does is simply JavaScript code written to make your life as a developer easier.  <br/>
 
-A class Component is a class that React has built into it. The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the DOM. And we have made `App` a class that is a child of the Component Class in React. Again, I recommend taking a few moments to study the above code and make sure you fully understand this before moving on.
+A class Component is a class that React has built into it. The render function is a method inside of the class Component, which we use to render everything inside of it that is returned to the DOM. And we have made `Hero` a class that is a child of the Component Class in React. Let me state this again, Component as in the code above "class Hero extends Component" works because under the hood of React, a class has already been created with methods and functions called Component. We have imported that component from the React library at the top of the file so we have access to it. Again, I recommend taking a few moments to study the above code and make sure you fully understand this before moving on.
 
 
 ##### Functional Components
@@ -177,4 +177,4 @@ export default functionalComponent;
 ```
 The first difference to pay attention to is that this is just a function that returns a div. The second thing to notice is that functional components don't use the render method. Functional components are much simpler to write and prior to Hooks were generally used whenever you didn't need to manage state using a constructor function because of their simpler set up.
 
-* Still in Progress * 
+ *Still in Progress* 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import ClassComponent from './Components/ClassComponent/ClassComponent';
-
+import Hooks from './Components/Hooks/Hooks';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       </header> */}
 		Hello World
         <ClassComponent />
+		<Hooks />	
     </div>
   );
 }
